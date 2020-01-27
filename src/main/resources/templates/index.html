@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Hello World</title>
+</head>
+<body>
+<div layout:fragment="context">
+    <div class="container mainContainer py-5">
+        <div class="row">
+            <div class="col-6 m-auto">
+
+                <div class="jumbotron py-4">
+                    <h3 class="mb-3">Searc Movie Page</h3>
+
+                    <form class="form" th:modelAttribute="result" th:object="${formModel}"
+                          th:action="@{/}" method="post">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="ftype" id="exampleRadios1" value="t"
+                                       th:field="*{ftype}" checked>
+                                <label class="form-check-label" for="exampleRadios1">
+                                    Title
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="ftype" id="exampleRadios2" value="i"
+                                       th:field="*{ftype}">
+                                <label class="form-check-label" for="exampleRadios2">
+                                    Imdb
+                                </label>
+                            </div>
+                            <div class="form-group row">
+                                <input class="col-sm-10 form-control mr-sm-2" type="search" placeholder="Search"
+                                       th:field="*{fquery}" aria-label="Search">
+                                <button class="col-sm-2 btn btn-outline-success my-2 my-sm-0" type="submit">Search
+                                </button>
+                            </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

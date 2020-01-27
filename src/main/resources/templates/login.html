@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Hello World</title>
+</head>
+<body>
+<div layout:fragment="context">
+        <div class="row">
+            <div class="col-6 m-auto">
+
+                <div class="jumbotron py-4">
+
+                    <form class="form" th:action="@{/login}" method="post">
+                        <div class="form-row">
+                            <div class="col-md-4 mb-3">
+                                <label for="validationTooltip01">username</label>
+                                <input type="text" class="form-control" id="validationTooltip01" value="melike" required>
+                                <div class="valid-tooltip">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="validationTooltip02">password</label>
+                                <input type="text" class="form-control" id="validationTooltip02" value="password" required>
+                                <div class="valid-tooltip">
+                                    Looks good!
+                                </div>
+                            </div>
+                            </div>
+                        <button class="btn btn-primary"   type="submit"onclick="true" >Submit </button>
+
+
+                    </form>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
